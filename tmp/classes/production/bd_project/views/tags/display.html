@@ -1,0 +1,25 @@
+*{ Display a post in one of these modes: 'full', 'home' or 'teaser' }*
+<div class="product ${_as == 'teaser' ? 'teaser' : ''}">
+    #{if _as != 'teaser'}
+    <div class="store-content">
+        <div class="about">Information: </div>
+        store information
+    </div>
+    #{/if}
+</div>
+
+#{if _as == 'full'}
+<div class="fullinfo">
+    <h3>
+        name ${_product.name}
+    </h3>
+    <h3>
+        cost ${_product.cost} rur
+    </h3>
+
+    <h3>
+        weight ${_product.weight}
+    </h3>
+
+</div>
+#{/if}

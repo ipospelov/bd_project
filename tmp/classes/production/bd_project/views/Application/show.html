@@ -1,0 +1,11 @@
+#{extends 'main.html' /}
+
+#{set title:product.name /}
+
+#{display product:product, as:'full' /}
+
+#{form @Application.addToBasket(product.name)}
+<p>
+    <input type="submit" value="Add to basket" />
+</p>
+#{/form}

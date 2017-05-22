@@ -1,7 +1,42 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
+
+<ul class="menu">
+    #{list items:productTypes, as:'type'}
+        <li><a href="">${type}</a>
+            <ul>
+            #{list items:storeProducts, as:'product'}
+                #{if type == product.type}
+                    <li><a href="@{Application.show(product.name)}">${product.name}</a></li>
+                #{/if}
+            #{/list}
+            </ul>
+        </li>
+    #{/list}
+</ul>
+
+#{display product:storeProducts.get(0), as:'home' /}
+
+
+
+
+<!--
+<div class = "menu">
+    #{list items:productTypes, as:'type'}
+    <h2 class="post-title">
+        <a href="#">${type}</a>
+    </h2>
+    #{/list}
+
+</div>
+
+</body>
+</html>
+-->
+
+<!--
 <form action="@{Application.sayHello()}" method="GET">
     <input type="text" name="myName" />
     <input type="submit" value="Say hello!" />
-</form>
+</form>-->

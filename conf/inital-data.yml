@@ -1,0 +1,51 @@
+Ingredient(морковь):
+  name: морковь
+  cost: 10.0
+  description: Ораньжевая, хрустящая
+
+Ingredient(соус):
+  name: сметанный
+  cost: 20.0
+  description: Белый, жирный
+
+Product(салат1):
+ name: морковный
+ cost: 100.0
+ weight: 130
+ type: салаты
+ description: Морковка, перец, соль
+
+Product(салат2):
+  name: капустный
+  cost: 100.0
+  weight: 130
+  type: салаты
+  description: Капуста, перец, соль
+
+Product(салат3):
+ name: огуречный
+ cost: 100.0
+ weight: 130
+ type: салаты
+ description: Огурец, перец, соль
+
+Product(шавуха1):
+  name: обыкновенная
+  cost: 150.0
+  weight: 300
+  type: основные блюда
+  description: Хрустящая, сочная
+
+Product(шавуха2):
+  name: необыкновенная
+  cost: 150.0
+  weight: 300
+  type: основные блюда
+  description: Хрустящая, сочная
+
+Product(воды):
+  name: вода обычная
+  cost: 150.0
+  weight: 300
+  type: напитки
+  description: Освежающая, сочная

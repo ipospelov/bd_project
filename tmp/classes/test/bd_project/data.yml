@@ -5,3 +5,15 @@
 #   email: bob@gmail.com
 #   password: secret
 #   fullname: Bob
+
+Ingredient(морковь):
+  name: морковь
+  cost: 10.0
+  description: Ораньжевая, хрустящая
+
+Product(салат1):
+ name: морковный
+ cost: 100.0
+ weight: 130
+ type: салат
+ description: Морковка, перец, соль

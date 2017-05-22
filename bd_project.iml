@@ -9,7 +9,7 @@
     <content url="file://$MODULE_DIR$/../play-1.4.3/modules/docviewer">
       <sourceFolder url="file://$MODULE_DIR$/../play-1.4.3/modules/docviewer/app" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="module-library">
@@ -45,15 +45,6 @@
         <SOURCES>
           <root url="file://$MODULE_DIR$/../play-1.4.3/framework/src" />
         </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="play-testrunner">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../play-1.4.3/modules/testrunner/lib/play-testrunner.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
       </library>
     </orderEntry>
   </component>
