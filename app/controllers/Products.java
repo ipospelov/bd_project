@@ -4,4 +4,5 @@ import play.*;
 import play.mvc.*;
 
 public class Products extends CRUD{
+
 }

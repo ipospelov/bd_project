@@ -1,6 +1,7 @@
 package models;
 
 
+import play.data.validation.Required;
 import play.db.jpa.Model;
 
 import javax.persistence.CascadeType;
@@ -12,9 +13,13 @@ import java.util.List;
 
 @Entity
 public class Product extends Model{
+    @Required
     public String name;
+    @Required
     public double cost;
+    @Required
     public int weight;
+    @Required
     public String type;
     @Lob
     public String description;
