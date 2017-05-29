@@ -1,4 +1,6 @@
+import models.Client;
 import models.Ingredient;
+import models.Order;
 import models.Product;
 import org.junit.*;
 import java.util.*;
@@ -26,15 +28,22 @@ public class BasicTest extends UnitTest {
 
     @Test
     public void fullTest(){
-        Fixtures.loadModels("data.yml");
+        if(Product.count() == 0) {
+            Fixtures.loadModels("inital-data.yml");
+        }
 
-        assertEquals(1,Ingredient.count());
-        assertEquals(1, Product.count());
 
-        Product frontProduct = Product.find("order by name desc").first();
-        frontProduct.addIngredient((Ingredient) Ingredient.find("order by name desc").first());
+        Client client = (Client) Client.findAll().get(0);
+        client.addOrder();
+        assertEquals(1, ((Client) Client.findAll().get(0)).orders.size());
+        assertEquals(1, client.orders.size());
+      /*  assertEquals("Василий", client.name);
+        List<Order> clientOrders =  Order.findAll();
+        assertEquals(0, clientOrders.size());*/
+        //Product frontProduct = Product.find("order by name desc").first();
+        //frontProduct.addIngredient((Ingredient) Ingredient.find("order by name desc").first());
 
-        assertEquals(1, frontProduct.ingredients.size());
+        //assertEquals(1, frontProduct.ingredients.size());
     }
 
 }

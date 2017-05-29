@@ -49,3 +49,8 @@ Product(воды):
   weight: 300
   type: напитки
   description: Освежающая, сочная
+
+Client(клиент):
+  name: Василий
+  phone: 212-85-06
+  address: Пирогова, 1
