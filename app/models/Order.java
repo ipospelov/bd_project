@@ -17,6 +17,7 @@ public class Order extends Model {
     public Date date;
 
     public boolean fulfilled;
+    public boolean confirmed;
 
     @ManyToMany
     public List<Product> products;
@@ -26,19 +27,33 @@ public class Order extends Model {
         this.client = client;
         products = new ArrayList<>();
         fulfilled = false;
+        confirmed = false;
     }
 
-/*
-    public Order(Client client, Date date, boolean fulfilled, List<Product> products) {
-        this.client = client;
-        this.date = date;
-        this.fulfilled = fulfilled;
-        this.products = products;
+    public void markAsDone(){
+        fulfilled = true;
+        this.save();
     }
-*/
+
+    public void markAsConfirmed(){
+        confirmed = true;
+        this.save();
+    }
+
+    public void deleteProduct(Long productId){
+        int i = 0;
+        for(Product product : products){
+            if(product.id == productId)
+                break;
+            i++;
+        }
+        products.remove(i);
+        this.save();
+    }
 
     public void addProduct(Product product){
         this.products.add(product);
+        this.save();
     }
 
     public void setClient(Client client){this.client = client;}

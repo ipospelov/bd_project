@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<testsuite failures="1" time="0.141" errors="0" skipped="0" tests="1" name="BasicTest">
-  <testcase classname="BasicTest" name="createAndRetrieveProduct" time="0.03">
+<testsuite failures="1" time="0.24" errors="0" skipped="0" tests="1" name="BasicTest">
+  <testcase classname="BasicTest" name="createAndRetrieveProduct" time="0.073">
       </testcase>
-  <testcase classname="BasicTest" name="fullTest" time="0.111">
-                  <failure type="" message="Failure, expected:&lt;0&gt; but was:&lt;1&gt;">
+  <testcase classname="BasicTest" name="fullTest" time="0.167">
+                  <failure type="" message="Failure, expected:&lt;2&gt; but was:&lt;1&gt;">
         <![CDATA[
-          In /test/BasicTest.java, line 39
+          In /test/BasicTest.java, line 44
           
-                      assertEquals(0, client.orders.size()); :
+                      assertEquals(client2.orders.get(0).products.size(), 1); :
           
         ]]>
         </failure>
                   <system-err>
-            java.lang.AssertionError: expected:&lt;0&gt; but was:&lt;1&gt;
+            java.lang.AssertionError: expected:&lt;2&gt; but was:&lt;1&gt;
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
 	at org.junit.Assert.assertEquals(Assert.java:645)
 	at org.junit.Assert.assertEquals(Assert.java:631)
-	at BasicTest.fullTest(BasicTest.java:39)
+	at BasicTest.fullTest(BasicTest.java:44)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

@@ -9,35 +9,35 @@ Ingredient(соус):
   description: Белый, жирный
 
 Product(салат1):
- name: морковный
+ name: морковный салат
  cost: 100.0
  weight: 130
  type: салаты
  description: Морковка, перец, соль
 
 Product(салат2):
-  name: капустный
+  name: капустный салат
   cost: 100.0
   weight: 130
   type: салаты
   description: Капуста, перец, соль
 
 Product(салат3):
- name: огуречный
+ name: огуречный салат
  cost: 100.0
  weight: 130
  type: салаты
  description: Огурец, перец, соль
 
 Product(шавуха1):
-  name: обыкновенная
+  name: блюдо обыкновенное
   cost: 150.0
   weight: 300
   type: основные блюда
   description: Хрустящая, сочная
 
 Product(шавуха2):
-  name: необыкновенная
+  name: блюдо необыкновенное
   cost: 150.0
   weight: 300
   type: основные блюда

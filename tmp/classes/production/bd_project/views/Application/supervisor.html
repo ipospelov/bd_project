@@ -1,0 +1,6 @@
+#{extends 'main.html' /}
+#{set title:'Supervisor' /}
+
+#{list items:clientList, as:'client'}
+    <ul><a href="@{Application.showOrderInfo(client.id)}">${client.name}</a></ul>
+#{/list}

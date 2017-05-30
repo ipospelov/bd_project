@@ -34,9 +34,17 @@ public class BasicTest extends UnitTest {
 
 
         Client client = (Client) Client.findAll().get(0);
-        client.addOrder();
+        Order order = client.addOrder();
+        order.addProduct((Product) Product.findAll().get(0));
+        order.addProduct((Product) Product.findAll().get(1));
+
         assertEquals(1, ((Client) Client.findAll().get(0)).orders.size());
         assertEquals(1, client.orders.size());
+        Client client2 = (Client) Client.findAll().get(0);
+        assertEquals(client2.orders.get(0).products.size(), 1);
+        System.out.println(client.orders.get(0).products.get(0).name);
+        System.out.println(client.orders.get(0).products.get(1).name);
+
       /*  assertEquals("Василий", client.name);
         List<Order> clientOrders =  Order.findAll();
         assertEquals(0, clientOrders.size());*/

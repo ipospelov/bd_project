@@ -1,0 +1,20 @@
+#{extends 'main.html' /}
+#{set title:'Basket' /}
+
+#{list items:products, as:'product'}
+<ul>
+    <a href="@{Application.show(product.name)}">${product.name}</a>
+    #{form @Application.deleteProduct(product.id, currentOrder.id)}
+    <p>
+        <input type="submit" value="Delete item" />
+    </p>
+    #{/form}
+</ul>
+#{/list}
+#{if currentOrder != null}
+#{form @Application.confirmOrder(currentOrder.id)}
+<p>
+    <input type="submit" value="Confirm order" />
+</p>
+#{/form}
+#{/if}

@@ -1,0 +1,29 @@
+#{extends 'main.html' /}
+#{set title:'Order info' /}
+
+<h3>
+    name: ${client.name}
+</h3>
+<h3>
+    address: ${client.address}
+</h3>
+
+<h3>
+    phone: ${client.phone}
+</h3>
+
+<h3>
+    order:
+</h3>
+
+#{list items:products, as:'product'}
+<ul>
+    <a>${product.name}</a>
+</ul>
+#{/list}
+
+#{form @Application.clearBasket(client.id)}
+<p>
+    <input type="submit" value="Mark as done" />
+</p>
+#{/form}

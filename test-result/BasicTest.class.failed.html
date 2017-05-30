@@ -80,7 +80,7 @@
                                                                         Ok
                                             </td>
                     <td width="5%" align="right" class="time" valign="top">
-                        30 ms
+                        73 ms
                     </td>
                 </tr>
                                 <tr>
@@ -88,24 +88,24 @@
                         <span>fullTest</span>
                     </td>
                     <td class="error" valign="top">
-                                                <strong>Failure, expected:&lt;0&gt; but was:&lt;1&gt;</strong>
+                                                <strong>Failure, expected:&lt;2&gt; but was:&lt;1&gt;</strong>
                                                 <div class="source">
-                            <span>In /test/BasicTest.java, line 39 :</span>
+                            <span>In /test/BasicTest.java, line 44 :</span>
                         </div>
                         <div class="sourceLine">
                             <span>
                                 
-                                            assertEquals(0, client.orders.size());
+                                            assertEquals(client2.orders.get(0).products.size(), 1);
                                 
                             </span>
                         </div>
                                                                         <a href="#" onclick="toggle_trace(this); return false;">Show trace</a>
-                        <pre data-role="trace">java.lang.AssertionError: expected:<0> but was:<1>
+                        <pre data-role="trace">java.lang.AssertionError: expected:<2> but was:<1>
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
 	at org.junit.Assert.assertEquals(Assert.java:645)
 	at org.junit.Assert.assertEquals(Assert.java:631)
-	at BasicTest.fullTest(BasicTest.java:39)
+	at BasicTest.fullTest(BasicTest.java:44)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -157,7 +157,7 @@
 </pre>
                                                                                             </td>
                     <td width="5%" align="right" class="time" valign="top">
-                        111 ms
+                        167 ms
                     </td>
                 </tr>
                             </table>

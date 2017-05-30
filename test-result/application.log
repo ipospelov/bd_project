@@ -1,24 +1,24 @@
-30 мая 2017 03:42:15,051 INFO  ~ Starting /home/posiv/NSU/bd_project/App
-30 мая 2017 03:42:15,546 INFO  ~ Module crud is available (/home/posiv/NSU/bd_project/play-1.4.3/modules/crud)
-30 мая 2017 03:42:16,741 WARN  ~ You're running Play! in DEV mode
-30 мая 2017 03:42:16,862 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
-30 мая 2017 03:42:28,525 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0 for default
-30 мая 2017 03:42:30,142 INFO  ~ HHH000262: Table not found: Client
-30 мая 2017 03:42:30,148 INFO  ~ HHH000262: Table not found: Ingredient
-30 мая 2017 03:42:30,151 INFO  ~ HHH000262: Table not found: Product
-30 мая 2017 03:42:30,158 INFO  ~ HHH000262: Table not found: Product_Ingredient
-30 мая 2017 03:42:30,161 INFO  ~ HHH000262: Table not found: store_order
-30 мая 2017 03:42:30,164 INFO  ~ HHH000262: Table not found: store_order_Product
-30 мая 2017 03:42:30,167 INFO  ~ HHH000262: Table not found: Client
-30 мая 2017 03:42:30,173 INFO  ~ HHH000262: Table not found: Ingredient
-30 мая 2017 03:42:30,177 INFO  ~ HHH000262: Table not found: Product
-30 мая 2017 03:42:30,180 INFO  ~ HHH000262: Table not found: Product_Ingredient
-30 мая 2017 03:42:30,183 INFO  ~ HHH000262: Table not found: store_order
-30 мая 2017 03:42:30,187 INFO  ~ HHH000262: Table not found: store_order_Product
-30 мая 2017 03:42:30,191 INFO  ~ HHH000262: Table not found: Client
-30 мая 2017 03:42:30,194 INFO  ~ HHH000262: Table not found: Ingredient
-30 мая 2017 03:42:30,197 INFO  ~ HHH000262: Table not found: Product
-30 мая 2017 03:42:30,199 INFO  ~ HHH000262: Table not found: Product_Ingredient
-30 мая 2017 03:42:30,212 INFO  ~ HHH000262: Table not found: store_order
-30 мая 2017 03:42:30,215 INFO  ~ HHH000262: Table not found: store_order_Product
-30 мая 2017 03:42:30,434 INFO  ~ Application 'bd_project' is now started !
+30 мая 2017 04:15:51,413 INFO  ~ Starting /home/posiv/NSU/bd_project/App
+30 мая 2017 04:15:51,917 INFO  ~ Module crud is available (/home/posiv/NSU/bd_project/play-1.4.3/modules/crud)
+30 мая 2017 04:15:53,156 WARN  ~ You're running Play! in DEV mode
+30 мая 2017 04:15:53,265 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+30 мая 2017 04:15:59,651 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0 for default
+30 мая 2017 04:16:01,324 INFO  ~ HHH000262: Table not found: Client
+30 мая 2017 04:16:01,330 INFO  ~ HHH000262: Table not found: Ingredient
+30 мая 2017 04:16:01,333 INFO  ~ HHH000262: Table not found: Product
+30 мая 2017 04:16:01,339 INFO  ~ HHH000262: Table not found: Product_Ingredient
+30 мая 2017 04:16:01,343 INFO  ~ HHH000262: Table not found: store_order
+30 мая 2017 04:16:01,346 INFO  ~ HHH000262: Table not found: store_order_Product
+30 мая 2017 04:16:01,349 INFO  ~ HHH000262: Table not found: Client
+30 мая 2017 04:16:01,355 INFO  ~ HHH000262: Table not found: Ingredient
+30 мая 2017 04:16:01,359 INFO  ~ HHH000262: Table not found: Product
+30 мая 2017 04:16:01,363 INFO  ~ HHH000262: Table not found: Product_Ingredient
+30 мая 2017 04:16:01,366 INFO  ~ HHH000262: Table not found: store_order
+30 мая 2017 04:16:01,369 INFO  ~ HHH000262: Table not found: store_order_Product
+30 мая 2017 04:16:01,373 INFO  ~ HHH000262: Table not found: Client
+30 мая 2017 04:16:01,376 INFO  ~ HHH000262: Table not found: Ingredient
+30 мая 2017 04:16:01,379 INFO  ~ HHH000262: Table not found: Product
+30 мая 2017 04:16:01,382 INFO  ~ HHH000262: Table not found: Product_Ingredient
+30 мая 2017 04:16:01,388 INFO  ~ HHH000262: Table not found: store_order
+30 мая 2017 04:16:01,393 INFO  ~ HHH000262: Table not found: store_order_Product
+30 мая 2017 04:16:01,566 INFO  ~ Application 'bd_project' is now started !

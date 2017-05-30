@@ -14,5 +14,9 @@ GET     /public/                                staticDir:public
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
 
+# supervisor page
+
+GET     /supervisor                             Application.supervisor
+
 # Import CRUD routes
 *      /admin              module:crud

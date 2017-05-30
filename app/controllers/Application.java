@@ -35,23 +35,32 @@ public class Application extends Controller {
         //System.out.println(client.name + " " + Client.count());
 
         List<Order> notFulfilled = client.orders.stream().filter(s->s.fulfilled!=true).collect(Collectors.toList());
-        if(notFulfilled.isEmpty())
-            client.addOrder();
-        else
-            notFulfilled.get(0).addProduct(product);
-
-/*
-        List<Order> clientOrders =  Order.find("byClient", client).fetch();
-        if(clientOrders.isEmpty()){
-            addOrder(product, client);
+        if(notFulfilled.isEmpty()) {
+            Order order = client.addOrder();
+            order.addProduct(product);
         }else {
-            List<Order> notFulfilled = clientOrders.stream().filter(s->s.fulfilled!=true).collect(Collectors.toList());
-            if(notFulfilled.isEmpty())
-                addOrder(product, client);
-            else
-                notFulfilled.get(0).addProduct(product);
-        }*/
+            notFulfilled.get(0).addProduct(product);
+        }
+
         show(name);
+    }
+
+    public static void showBasket(){
+        Client currentClient = (Client) Client.findAll().get(0);
+        List<Order> currentOrders = currentClient.orders.stream().filter(s->s.fulfilled!=true && s.confirmed!=true).collect(Collectors.toList());
+        //System.out.println(currentOrders.size());
+        //System.out.println(currentOrders.get(0).products.size());
+        Order currentOrder;
+        List<Product> products;
+        if(currentOrders.isEmpty()) {
+            currentOrder = null;
+            products = null;
+        }else {
+            currentOrder = currentOrders.get(0);
+            products = currentOrder.products;
+        }
+
+        render(products, currentOrder);
     }
 
     public static void addOrder(Product product, Client client){
@@ -59,6 +68,42 @@ public class Application extends Controller {
         //Order currentOrder = new Order(client).save();
         //currentOrder.setClient(client);
         order.addProduct(product);
+    }
+
+    public static void supervisor(){
+        List<Client> clients = Client.findAll();
+        List<Client> currentClients = clients.stream().filter(s->
+            (s.orders.stream().filter(t->t.fulfilled != true && t.confirmed == true).collect(Collectors.toList()).size() > 0)
+        ).collect(Collectors.toList());
+        List<Client> clientList = new ArrayList<>(currentClients);
+        render(clientList);
+    }
+
+    public static void showOrderInfo(Long id){
+        Client client = Client.findById(id);
+        List<Order> currentOrders = client.orders.stream().filter(s->s.fulfilled!=true && s.confirmed==true).collect(Collectors.toList());
+        List<Product> products = currentOrders.get(0).products;
+        render(client, products);
+    }
+
+    public static void clearBasket(Long id){
+        Client client = Client.findById(id);
+        List<Order> currentOrders = client.orders.stream().filter(s->s.fulfilled!=true && s.confirmed == true).collect(Collectors.toList());
+        currentOrders.forEach(s->s.markAsDone());
+        supervisor();
+    }
+
+    public static void deleteProduct(Long productId, Long orderId){
+        Order order = (Order)Order.findById(orderId);
+        order.deleteProduct(productId);
+        if(order.products.isEmpty())
+            order.delete();
+        showBasket();
+    }
+
+    public static void confirmOrder(Long orderId){
+        ((Order)Order.findById(orderId)).markAsConfirmed();
+        index();
     }
 
 }
